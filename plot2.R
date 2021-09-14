@@ -23,8 +23,8 @@ powerDT[, Global_active_power := lapply(.SD, as.numeric), .SDcols = c("Global_ac
 # Making a POSIXct date capable of being filtered and graphed by time of day
 powerDT[, dateTime := as.POSIXct(paste(Date, Time), format = "%d/%m/%Y %H:%M:%S")]
 
-# Filter Dates for 2007-02-08 and 2007-02-14
-powerDT <- powerDT[(dateTime >= "2007-02-08") & (dateTime < "2007-02-14")]
+# Filter Dates for 2007-02-01 and 2007-02-02
+powerDT <- powerDT[(dateTime >= "2007-02-01") & (dateTime < "2007-02-02")]
 
 png("plot2.png", width=480, height=480)
 

@@ -23,8 +23,8 @@ powerDT[, Global_active_power := lapply(.SD, as.numeric), .SDcols = c("Global_ac
 # Change Date Column to Date Type
 powerDT[, Date := lapply(.SD, as.Date, "%d/%m/%Y"), .SDcols = c("Date")]
 
-# Filter Dates for 2007-02-01 and 2007-02-07
-powerDT <- powerDT[(Date >= "2007-02-01") & (Date <= "2007-02-07")]
+# Filter Dates for 2007-02-01 and 2007-02-02
+powerDT <- powerDT[(Date >= "2007-02-01") & (Date <= "2007-02-02")]
 
 png("plot1.png", width=480, height=480)
 
